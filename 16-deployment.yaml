@@ -9,14 +9,14 @@ spec:
   # modify replicas according to your case
   replicas: 3
   selector:
-  # these are used to select the pod to create replicas
+    # these are used to select the pod to create replicas
     matchLabels:
       tier: frontend
       app: nginx
-      # this is pod definition
+  # this is pod definition
   template:
     metadata:
-    # thsese labels belongs to pod
+      # these labels belongs to pod
       labels:
         tier: frontend
         app: nginx
@@ -31,8 +31,8 @@ metadata:
   name: nginx
 spec:
   selector:
-   tier: frontend
-   app: nginx
+    tier: frontend
+    app: nginx
   ports:
   - name: nginx-svc-port
     protocol: TCP
